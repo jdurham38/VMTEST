@@ -12,7 +12,8 @@ jobs:
             - $AZURE_VM_SSH_FINGERPRINT
       - run:
           name: Copy updated files to VM
-          command: scp -o StrictHostKeyChecking=no -r ./* $AZURE_VM_USER@$AZURE_VM_IP:~/myapp/cd-node-azure-vm         
+          command: scp -o StrictHostKeyChecking=no -r ./* $AZURE_VM_USER@$AZURE_VM_IP:~/myapp/cd-node-azure-vm 
+          
  deploy:
    machine:
      enabled: true
